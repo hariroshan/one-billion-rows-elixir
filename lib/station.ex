@@ -54,6 +54,7 @@ defmodule Station do
     end
   end
 
+  # Refer this
   # https://github.com/IceDragon200/1brc_ex/blob/59f01abae69f092de39c5fe14e17f697b9d31b13/src/1brc.workers.blob.maps.chunk_to_worker.exs
   defp parse_measurement(<<?-, d2, d1, ?., d01, "\n", _rest::binary>>) do
     -(char_to_num(d2) * 100 + char_to_num(d1) * 10 + char_to_num(d01))
